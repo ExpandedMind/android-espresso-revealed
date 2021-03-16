@@ -2,7 +2,6 @@ package com.example.android.architecture.blueprints.todoapp.test.chapter1.action
 
 import com.example.android.architecture.blueprints.todoapp.R;
 import com.example.android.architecture.blueprints.todoapp.test.BaseTest;
-import com.example.android.architecture.blueprints.todoapp.test.chapter1.data.TestData;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -95,5 +94,16 @@ public class ViewActionsTest extends BaseTest {
 
         // Verify edited TO-DO is shown.
         onView(withText(editedToDoTitle)).check(matches(isDisplayed()));
+    }
+}
+
+class TestData {
+
+    public static String getToDoTitle() {
+        return "item " + System.currentTimeMillis();
+    }
+
+    public static String getToDoDescription() {
+        return "description " + System.currentTimeMillis();
     }
 }
